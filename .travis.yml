@@ -38,3 +38,6 @@ before_script:
 
 script:
   - ./gradlew build connectedAndroidTest
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
